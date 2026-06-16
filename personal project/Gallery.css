@@ -43,12 +43,17 @@ nav a{
     gap:20px;
 }
 
-.images img{
-    width:100%;
-    height:250px;
+#images img{
+    width: 250px;;
+    height: 250px;;
     object-fit:cover;
     border-radius:10px;
     transition:0.3s;
+    flex-direction: row;
+}
+
+#logo{
+    flex-direction: row;
 }
 
 .images img:hover{
