@@ -1,21 +1,31 @@
+/* Reset */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
 }
 
 body{
-    background:#f0f2f5;
+    font-family:'Segoe UI', Arial, sans-serif;
+    background:#f5f7fa;
+    color:#333;
+    line-height:1.6;
 }
 
+/* Header */
 header{
-    background:#004080;
+    background:linear-gradient(135deg, #8B0000, #b22222);
     color:white;
-    padding:20px;
     text-align:center;
+    padding:25px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
 
+header h1{
+    margin-bottom:10px;
+}
+
+/* Navigation */
 nav{
     margin-top:10px;
 }
@@ -24,31 +34,88 @@ nav a{
     color:white;
     text-decoration:none;
     margin:0 15px;
+    font-weight:600;
+    transition:0.3s;
 }
 
-.about-section{
-    width:80%;
-    margin:50px auto;
-    background:white;
-    padding:40px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+nav a:hover{
+    color:#ffd700;
 }
 
-.about-section h2{
-    color:#004080;
-    margin-bottom:20px;
+/* Section */
+section{
+    text-align:center;
+    padding:60px 20px;
+    animation:slideUp 1.2s ease;
 }
 
-.about-section p{
-    line-height:1.8;
-    font-size:18px;
+section h2{
+    color:#8B0000;
+    margin-bottom:15px;
+    font-size:2rem;
 }
 
+section p{
+    max-width:800px;
+    margin:auto;
+    color:#555;
+}
+
+/* Video */
+video{
+    margin-top:25px;
+    max-width:100%;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    transition:0.4s ease;
+}
+
+video:hover{
+    transform:scale(1.02);
+}
+
+/* Footer */
 footer{
-    margin-top:50px;
-    background:#004080;
+    background:#222;
     color:white;
     text-align:center;
-    padding:15px;
+    padding:20px;
+    margin-top:40px;
+}
+
+/* Animation */
+@keyframes slideUp{
+    from{
+        transform:translateY(50px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    header{
+        padding:20px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:8px;
+    }
+
+    section{
+        padding:40px 15px;
+    }
+
+    section h2{
+        font-size:1.7rem;
+    }
+
+    video{
+        width:100%;
+    }
 }
